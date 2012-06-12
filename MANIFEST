@@ -1,0 +1,17 @@
+Build.PL
+Changes
+LICENSE
+MANIFEST
+MANIFEST.SKIP
+META.json
+META.yml
+README
+bin/download-bprks
+bin/parse-bprks-statement
+dist.ini
+lib/Finance/Bank/ID/BPRKS.pm
+t/00-compile.t
+t/01-parse_statement.t
+t/data/stmt1.html
+t/release-pod-coverage.t
+t/release-pod-syntax.t

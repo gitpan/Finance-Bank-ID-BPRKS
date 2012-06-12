@@ -1,0 +1,32 @@
+---
+abstract: 'Check your BPR KS accounts from Perl'
+author:
+  - 'Steven Haryanto <stevenharyanto@gmail.com>'
+build_requires:
+  File::Slurp: 0
+  Module::Build: 0.3601
+configure_requires:
+  Module::Build: 0.3601
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Finance-Bank-ID-BPRKS
+requires:
+  App::Options: 0
+  Data::Dumper: 0
+  Data::Rmap: 0
+  Finance::Bank::ID::Base: 0.22
+  Log::Any: 0
+  Log::Any::App: 0.23
+  Moo: 0
+  Parse::Number::ID: 0
+  WWW::Mechanize: 0
+  YAML: 0
+  perl: 5.010000
+resources:
+  homepage: http://search.cpan.org/dist/Finance-Bank-ID-BPRKS/
+  repository: http://github.com/sharyanto/perl-Finance-Bank-ID-BPRKS
+version: 0.01

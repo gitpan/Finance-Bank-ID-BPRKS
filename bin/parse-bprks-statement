@@ -1,0 +1,67 @@
+#!/usr/bin/perl
+
+# workaround for dzil
+package parse_bprks_statement;
+
+use 5.010;
+use strict;
+use warnings;
+
+use File::Slurp;
+use Finance::Bank::ID::BPRKS;
+use YAML;
+
+our $VERSION = '0.01'; # VERSION
+
+my $ibank = Finance::Bank::ID::BPRKS->new;
+my $stmt;
+
+if (@ARGV) {
+    $stmt = [map {read_file($_)} @ARGV];
+} else {
+    $stmt = join "", <>;
+}
+print Dump $ibank->parse_statement($stmt, return_datetime_obj=>0);
+
+1;
+# ABSTRACT: Parse BPR KS internet banking statement
+
+
+__END__
+=pod
+
+=head1 NAME
+
+parse_bprks_statement - Parse BPR KS internet banking statement
+
+=head1 VERSION
+
+version 0.01
+
+=head1 SYNOPSIS
+
+ # for a single page
+ % parse-bpr-statement < statement-page
+
+ # for multiple pages
+ % parse-bpr-statement page1.html page2.html ...
+
+=head1 DESCRIPTION
+
+=head1 SEE ALSO
+
+L<Finance::Bank::ID::BPRKS>
+
+=head1 AUTHOR
+
+Steven Haryanto <stevenharyanto@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Steven Haryanto.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
