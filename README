@@ -2,7 +2,8 @@ NAME
     Finance::Bank::ID::BPRKS - Check your BPR KS accounts from Perl
 
 VERSION
-    version 0.01
+    This document describes version 0.02 of Finance::Bank::ID::BPRKS (from
+    Perl distribution Finance-Bank-ID-BPRKS), released on 2014-05-17.
 
 SYNOPSIS
         use Finance::Bank::ID::BPRKS;
@@ -179,6 +180,9 @@ METHODS
     Return balance for specified account, or the default account if $account
     is not specified.
 
+  list_cards()
+    List ATM cards. Not yet implemented.
+
   get_statement(%args) => $stmt
     Get account statement. %args keys:
 
@@ -258,11 +262,27 @@ METHODS
     The method can also handle some copy-pasted text from the GUI browser,
     but this is no longer documented or guaranteed to keep working.
 
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/Finance-Bank-ID-BPRKS>.
+
+SOURCE
+    Source repository is at
+    <https://github.com/sharyanto/perl-Finance-Bank-ID-BPRKS>.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Finance-Bank-ID-BPRKS
+    >
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
+
 AUTHOR
     Steven Haryanto <stevenharyanto@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2012 by Steven Haryanto.
+    This software is copyright (c) 2014 by Steven Haryanto.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
